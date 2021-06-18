@@ -1,12 +1,29 @@
+$blanco:white;
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex{
+  display: flex;
+  align-items: center;
+
+}
+
+
+
 body {
     margin: 0;
     font-family: 'Muli', sans-serif;
   }
   .header {
-    align-items: center;
+
+    @include flex;
+    //align-items: center;
     background-color: #21c08b;
     color: white;
-    display: flex;
+   // display: flex;
     height: 100px;
     justify-content: space-between;
     top: 0px;
@@ -57,7 +74,7 @@ body {
   
 
   .login__container--remember-me a {
-    color: white;
+    color:$blanco;
     font-size: 14px;
     text-decoration: none;
   }

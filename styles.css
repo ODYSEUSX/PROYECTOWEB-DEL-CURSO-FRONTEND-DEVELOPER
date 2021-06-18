@@ -1,17 +1,26 @@
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 body {
   margin: 0;
   font-family: 'Muli', sans-serif;
 }
 
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: #21c08b;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   height: 100px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
