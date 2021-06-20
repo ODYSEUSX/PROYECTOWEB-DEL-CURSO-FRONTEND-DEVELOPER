@@ -1,69 +1,55 @@
-body {
-    margin: 0;
-    font-family: 'Muli', sans-serif;
-  }
-  .header {
-    align-items: center;
-    background-color: #21c08b;
-    color: white;
-    display: flex;
-    height: 100px;
-    justify-content: space-between;
-    top: 0px;
-    width: 100%;
-  }
-  .header__img {
-    margin-left: 30px;
-    width: 200px;
-  }
-  .login {
-    background: linear-gradient(#21C08B, #AB88FF);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0px 30px;
-    min-height: calc(100vh - 200px);
-  }
-  .login__container {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 2px solid white;
-    border-radius: 40px;
-    color: white;
-    padding: 60px 68px 40px;
-    min-height: 700px;
-    width: 300px;
-  }
-  .login__container--form {
-    display: flex;
-    flex-direction: column;
-  }
-  .login__container--form label {
-    font-size: 14px;
-  }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;    
+}
+
+.header{
+  outline: 1px solid gold;
+  height: 3rem;
+}
+.container{
+  
+  display: flex;
+  height: inherit;  /*hereda la altura del contenedor padre(body) */
+}
+.content {
+ outline: 1px solid cyan;
+  flex:1    /*ocupa todo el espacio que queda del ancho.*/
+}
+.aside{
+  outline:1px solid magenta ;
+  flex:0 0 25%
+}
+.footer{
+  
+  height: 6rem;
+  margin-top: auto; /*manda al footer a la parte baja*/
+  outline: 1px solid salmon; /* borde que se dibuja por encima(superpuesto) del elemento no afecta las mediads (ancho alto,etc) */
+}
+body{
+  display: flex;    /* se aplica en el contenedor principal por defecto se ejecuta en el eje principal(eje x) y de izquierda a derecha */
 
   
+  height: 100vh;  /* "viewport-height su medida nos permite definir las dimensiones porcentuales de (vw)anchura/altura de todos los "elementos que contiene"  por ende los elementos footer, header y section se veran al 100% a lo largo del navegador desde donde lo visualizamos*/
+  flex-flow: column nowrap;
+  font-size: 16px;
+}
+.menu{
+  display: flex;
+}
 
+.Menu-item{
+  list-style: none;
+  flex: 1;
+  outline: 1px solid cyan;
+  line-height: 3rem;  /* completa la altura obteniendo dicha altura del contenedor padre en este caso header*/
+  text-align: center;
+  transition: flex 0.5s; /* significa que se aplicara la transición en el elemento flex y durará medio segundo */
 
+}
 
+.Menu-item:hover {
+  flex: 8; /*nos indica el factor de crecimiento cuando apuntamos conel mouse en el item */
 
-  .login__container--remember-me {
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-  .login__container--remember-me a {
-    color: white;
-    font-size: 14px;
-    text-decoration: none;
-  }
-  .login__container--remember-me a:hover {
-    text-decoration: underline;
-  }
-  .login__container--social-media > div {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
+}
